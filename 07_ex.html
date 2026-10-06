@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            #wrap {
+                width: 400px;
+                height: 400px;
+                border: 1px solid #000;
+                margin-left: 40px;
+                margin-top: 40px;
+            }
+            #wrap div {
+                width: 80px;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: yellow;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            #wrap:hover div {
+                animation-name: div;
+                animation-duration: 4s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
+            @keyframes div {
+                0% {
+                    transform: translate(0, 0);
+                }
+                25% {
+                    transform: translate(400px, 0);
+                    background: aqua;
+                }
+                50% {
+                    transform: translate(400px, 400px);
+                    background: purple;
+                }
+                75% {
+                    transform: translate(0, 400px);
+                    background: pink;
+                }
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div>GO!</div>
+        </div>
+    </body>
+</html>

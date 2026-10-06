@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box01 {
+                width: 100px;
+                height: 100px;
+                background: red;
+                margin: 50px auto;
+                transition: 1s;
+            }
+            .box01:hover {
+                background: green;
+            }
+            .box02 {
+                width: 100px;
+                height: 100px;
+                background: blue;
+                /* margin: 0 auto; */
+                /* transition-property: all;
+                transition-duration: 1s;
+                transition-delay: 2s;
+                transition-timing-function: ease-in-out; */
+                transition:
+                    width 1s ease-in,
+                    background 0.5s ease-in-out,
+                    border-radius 2s ease-in-out;
+            }
+            .box02:hover {
+                width: 500px;
+                background: rgb(248, 248, 55);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box01"></div>
+        <div class="box02"></div>
+    </body>
+</html>

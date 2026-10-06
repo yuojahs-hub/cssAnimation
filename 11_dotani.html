@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                height: 100vh;
+                background-image: linear-gradient(
+                    to top,
+                    #dbdcd7 0%,
+                    #dddcd7 24%,
+                    #e2c9cc 30%,
+                    #e7627d 46%,
+                    #b8235a 59%,
+                    #801357 71%,
+                    #3d1635 84%,
+                    #1c1a27 100%
+                );
+            }
+            .loading {
+                width: 20px;
+                height: 100px;
+                position: absolute;
+                left: 30%;
+                top: 30%;
+
+                animation: loading 1s ease-in-out 100;
+            }
+            .loading2 {
+                width: 20px;
+                height: 100px;
+
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                /* transform: translate(-50%, -50%); */
+                /* 상하좌우 가운데 위치하기 */
+                animation: loading 1s ease-in-out 100;
+            }
+            .loading3 {
+                width: 20px;
+                height: 100px;
+                position: absolute;
+                left: 70%;
+                top: 70%;
+                animation: loading 1s ease-in-out 100;
+            }
+            .circle1 {
+                width: 20px;
+                height: 20px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+            .circle2 {
+                width: 50px;
+                height: 50px;
+                background-color: #fff;
+                border-radius: 50%;
+                margin-top: 60px;
+            }
+            @keyframes loading {
+                0% {
+                    transform: rotate(0) translate(-50%, -50%);
+                }
+                100% {
+                    transform: rotate(360deg) translate(-50%, -50%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loading">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+        </div>
+        <div class="loading2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+        </div>
+        <div class="loading3">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+        </div>
+    </body>
+</html>

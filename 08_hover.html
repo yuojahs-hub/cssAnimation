@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                height: 100vh;
+                background-image: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
+            }
+            .hover_wrap {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            figure {
+                width: 400px;
+                margin: 10px;
+                overflow: hidden;
+                position: relative;
+                background-color: #000;
+            }
+            figure img {
+                display: block;
+                width: 100%;
+                transition: opacity 0.3s;
+            }
+            figure:hover img {
+                opacity: 0.5;
+            }
+
+            /* 가상요소로 선 만들기 */
+            figure::before {
+                content: "";
+                width: 60px;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                transform: translate(-50%, -50%);
+            }
+            figure::after {
+                content: "";
+                width: 2px;
+                height: 60px;
+                background-color: #fff;
+                position: absolute;
+                transform: translate(-50%, -50%);
+            }
+
+            /* hover1 */
+            figure.hover1::before {
+                left: 120%;
+                top: 50%;
+
+                transition: all 0.3s ease-in-out;
+                opacity: 0;
+            }
+            figure.hover1::after {
+                left: 50%;
+                top: 120%;
+                transition: all 0.3s ease-in-out;
+                opacity: 0;
+            }
+            figure.hover1:hover::before {
+                left: 50%;
+                top: 50%;
+                opacity: 1;
+            }
+            figure.hover1:hover::after {
+                left: 50%;
+                top: 50%;
+                opacity: 1;
+            }
+
+            /* hover2 */
+            figure.hover2::before {
+                left: -20%;
+                top: 50%;
+
+                transition: all 0.3s ease-in-out;
+                opacity: 0;
+            }
+            figure.hover2::after {
+                right: 50%;
+                top: -20%;
+                transition: all 0.3s ease-in-out;
+                opacity: 0;
+            }
+            figure.hover2:hover::before {
+                left: 50%;
+                top: 50%;
+                opacity: 1;
+            }
+            figure.hover2:hover::after {
+                right: 50%;
+                top: 50%;
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hover_wrap">
+            <figure class="hover1">
+                <img src="img/pexels-bru-no-1595851.jpg" alt="" />
+            </figure>
+            <figure class="hover2">
+                <img src="img/pexels-bum-s-kim-2164276877-39879817.jpg" alt="" />
+            </figure>
+        </div>
+    </body>
+</html>

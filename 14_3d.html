@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .world {
+                width: 60vw;
+                height: 60vh;
+                background-image: linear-gradient(-20deg, #dcb0ed 0%, #99c99c 100%);
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                perspective: 500px;
+            }
+            .card {
+                width: 100px;
+                height: 150px;
+                background-color: #acd4c2;
+                color: white;
+                font-size: 25px;
+                font-weight: bold;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: transform 0.5s;
+            }
+            .world:hover .card {
+                transform: rotateY(180deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="world">
+            <div class="card">A</div>
+            <div class="card">B</div>
+            <div class="card">C</div>
+        </div>
+    </body>
+</html>

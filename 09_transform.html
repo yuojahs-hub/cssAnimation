@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box01 {
+                width: 512px;
+                height: 512px;
+                border: 20px solid red;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            img {
+                transition: 0.5s;
+            }
+            .box01:hover img {
+                transform: scale(1.2) translate(100px);
+            }
+            .box02 {
+                width: 300px;
+                height: 300px;
+                background-color: aqua;
+                margin: 20px auto;
+                background: url(img/bunny.jpg) no-repeat center center;
+                background-size: 100%;
+                transition: all 0.5s;
+            }
+            .box02:hover {
+                background-size: 150%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box01"><img src="img/puppy.jpg" alt="" /></div>
+        <div class="box02">백그라운드</div>
+    </body>
+</html>

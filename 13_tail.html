@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                height: 100vh;
+                background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .circle {
+                position: absolute;
+                animation: movex 1s ease-in-out alternate infinite;
+            }
+            .circle > div {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: #fff;
+                animation: movey 1s linear infinite;
+            }
+            .circle:nth-child(2) > div {
+                width: 40px;
+                height: 40px;
+                opacity: 0.8;
+            }
+            .circle:nth-child(3) > div {
+                width: 30px;
+                height: 30px;
+                opacity: 0.6;
+            }
+            .circle:nth-child(4) > div {
+                width: 20px;
+                height: 20px;
+                opacity: 0.4;
+            }
+            .circle:nth-child(5) > div {
+                width: 10px;
+                height: 10px;
+                opacity: 0.2;
+            }
+            @keyframes movex {
+                0% {
+                    transform: translate(-100px, 0);
+                }
+                100% {
+                    transform: translate(100px, 0);
+                }
+            }
+            @keyframes movey {
+                0% {
+                    transform: translate(0, 0);
+                }
+                25% {
+                    transform: translate(0, -100px);
+                }
+                50% {
+                    transform: translate(0, 0);
+                }
+                75% {
+                    transform: translate(0, 100px);
+                }
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+
+            /* 하나씩 늦게 시작하기 */
+            .circle:nth-child(2),
+            .circle:nth-child(2) > div {
+                animation-delay: 0.1s;
+            }
+            .circle:nth-child(3),
+            .circle:nth-child(3) > div {
+                animation-delay: 0.2s;
+            }
+            .circle:nth-child(4),
+            .circle:nth-child(4) > div {
+                animation-delay: 0.3s;
+            }
+            .circle:nth-child(5),
+            .circle:nth-child(5) > div {
+                animation-delay: 0.4s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="circle"><div></div></div>
+        <div class="circle"><div></div></div>
+        <div class="circle"><div></div></div>
+        <div class="circle"><div></div></div>
+        <div class="circle"><div></div></div>
+    </body>
+</html>

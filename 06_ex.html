@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #wrap {
+                width: 600px;
+                height: 600px;
+                background: gray;
+                position: relative;
+                margin: 0 auto;
+            }
+            div {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .ball01 {
+                background: red;
+            }
+            .ball02 {
+                background: green;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            #wrap:hover .ball01 {
+                animation-name: ball01;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+            }
+
+            #wrap:hover .ball02 {
+                animation-name: ball02;
+                animation-duration: 0.5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes ball01 {
+                0% {
+                    transform: translate(0, 0);
+                }
+                25% {
+                    transform: translate(500px, 0);
+                }
+                50% {
+                    transform: translate(500px, 500px);
+                }
+                75% {
+                    transform: translate(0, 500px);
+                }
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+
+            @keyframes ball02 {
+                from {
+                    left: 0;
+                    top: 0;
+                }
+                to {
+                    left: calc(100% - 100px);
+                    top: calc(100% - 100px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <section id="wrap">
+                <div class="ball01">BALL01</div>
+                <div class="ball02">BALL02</div>
+            </section>
+        </div>
+    </body>
+</html>
